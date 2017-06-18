@@ -36,7 +36,7 @@ test.start = function() {
 	    for (var c = 0; c < 5; c++) {
 
 	        var box = (new lime.Sprite)
-	            .setSize(80, 80)
+	            .setSize(40, 40)
 	            .setFill(0, 150, 0);
 
 	        box.selected = 0;
