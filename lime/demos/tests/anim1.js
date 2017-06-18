@@ -33,7 +33,7 @@ test.start = function() {
 
 	var menuscene = new lime.Scene;
 
-	var layer = (new lime.Layer).setPosition(200, 10);
+	var layer = (new lime.Layer).setPosition(200, 1000);
 	menuscene.appendChild(layer);
 
 
