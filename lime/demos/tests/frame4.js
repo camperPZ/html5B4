@@ -116,7 +116,7 @@ test.moveToPosition = function(monster,pos){
     // on stop show front facing
     goog.events.listen(move,lime.animation.Event.STOP,function(){
         anim.stop();
-        monster.setFill(test.ss.getFrame('walking-s0001.png'));
+        monster.setFill(test.ss.getFrame('angle10020.png'));
     })
     
 }
