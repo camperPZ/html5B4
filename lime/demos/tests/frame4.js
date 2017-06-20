@@ -11,6 +11,7 @@ goog.require('lime.animation.KeyframeAnimation');
 goog.require('lime.animation.MoveBy');
 goog.require('lime.SpriteSheet');
 goog.require('lime.ASSETS.monster.plist')
+goog.require('lime.ASSETS.bot.png')
 
 
 test.WIDTH = 600;
