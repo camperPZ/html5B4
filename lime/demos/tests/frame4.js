@@ -107,7 +107,7 @@ test.moveToPosition = function(monster,pos){
 	
 	// show animation
 	var anim = new lime.animation.KeyframeAnimation();
-	anim.delay= 1/7;
+	anim.delay= 1/24;
 	for(var i=1;i<=7;i++){
 	    anim.addFrame(test.ss.getFrame('walking-'+dir+'000'+i+'.png'));
 	}
