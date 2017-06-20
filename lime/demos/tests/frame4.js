@@ -11,7 +11,7 @@ goog.require('lime.animation.KeyframeAnimation');
 goog.require('lime.animation.MoveBy');
 goog.require('lime.SpriteSheet');
 goog.require('lime.ASSETS.monster.plist')
-goog.require('lime.ASSETS.bot.png')
+
 
 
 test.WIDTH = 600;
@@ -117,7 +117,7 @@ test.moveToPosition = function(monster,pos){
     // on stop show front facing
     goog.events.listen(move,lime.animation.Event.STOP,function(){
         anim.stop();
-        monster.setFill(test.ss.getFrame('angle10020.png'));
+        monster.setFill(test.ss.getFrame('walking-s0001.png'));
     })
     
 }
