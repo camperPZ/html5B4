@@ -97,9 +97,9 @@ test.moveToPosition = function(monster,pos){
         angle = Math.atan2(-delta.y,delta.x);
     
     //determine the direction    
-    var dir = Math.round(angle/(Math.PI*2)*4);
-    var dirs = ['e','n','w','s'];
-    if(dir<0) dir=4+dir;
+    var dir = Math.round(angle/(Math.PI*2)*8);
+    var dirs = ['e','ne','n','nw','w','sw','s','se'];
+    if(dir<0) dir=8+dir;
     dir = dirs[dir];
     
     //move
