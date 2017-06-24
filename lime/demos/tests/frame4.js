@@ -14,8 +14,8 @@ goog.require('lime.ASSETS.monster.plist')
 
 
 
-test.WIDTH = 6000;
-test.HEIGHT = 4000;
+test.WIDTH = 600;
+test.HEIGHT = 400;
 
 
 test.start = function() {
@@ -37,22 +37,22 @@ test.start = function() {
 	test.ss = new lime.SpriteSheet('assets/monster.png',lime.ASSETS.monster.plist);
 	
 	
-    var sprite = test.makeMonster().setPosition(1000,1000);
+    var sprite = test.makeMonster().setPosition(100,100);
     layer.appendChild(sprite);
 	
 	test.selectedMonster = sprite;
 	sprite.select();
 
-    sprite = test.makeMonster().setPosition(5000,1000);
+    sprite = test.makeMonster().setPosition(500,100);
     layer.appendChild(sprite);
 
-    sprite = test.makeMonster().setPosition(3000,2000);
+    sprite = test.makeMonster().setPosition(300,200);
     layer.appendChild(sprite);
 
-    sprite = test.makeMonster().setPosition(2000,3000);
+    sprite = test.makeMonster().setPosition(200,300);
     layer.appendChild(sprite);
 
-    sprite = test.makeMonster().setPosition(4000,3000);
+    sprite = test.makeMonster().setPosition(400,300);
     layer.appendChild(sprite);
 
 	
@@ -61,7 +61,7 @@ test.start = function() {
 };
 
 test.makeMonster = function(){
-    var sprite = new lime.Sprite().setPosition(2000,2000)
+    var sprite = new lime.Sprite().setPosition(200,200)
         .setFill(test.ss.getFrame('angle10020.png'));
 	//layer.appendChild(sprite);
 	
@@ -80,7 +80,7 @@ test.makeMonster = function(){
 	}
 	
 	// other element for hit area because original images have edges and I didn't crop
-	var hitarea = new lime.Sprite().setSize(50,80);
+	var hitarea = new lime.Sprite().setSize(300,300);
 	sprite.appendChild(hitarea);
 	
 	goog.events.listen(hitarea,['mousedown','touchstart'],function(e){
