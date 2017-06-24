@@ -62,7 +62,7 @@ test.start = function() {
 
 test.makeMonster = function(){
     var sprite = new lime.Sprite().setPosition(200,200)
-        .setFill(test.ss.getFrame('walking-s0001.png'));
+        .setFill(test.ss.getFrame('angle10020.png'));
 	//layer.appendChild(sprite);
 	
 	// show if monster is selected
@@ -98,7 +98,7 @@ test.moveToPosition = function(monster,pos){
     
     //determine the direction    
     var dir = Math.round(angle/(Math.PI*2)*8);
-    var dirs = ['e','ne','n','nw','w','sw','s','se'];
+    var dirs = ['1','2','3','4','5','6','7','8'];
     if(dir<0) dir=8+dir;
     dir = dirs[dir];
     
@@ -109,15 +109,15 @@ test.moveToPosition = function(monster,pos){
 	// show animation
 	var anim = new lime.animation.KeyframeAnimation();
 	anim.delay= 1/24;
-	for(var i=1;i<=7;i++){
-	    anim.addFrame(test.ss.getFrame('walking-'+dir+'000'+i+'.png'));
+	for(var i=20;i<=70;i++){
+	    anim.addFrame(test.ss.getFrame('angle'+dir+'00'+i+'.png'));
 	}
     monster.runAction(anim);
     
     // on stop show front facing
     goog.events.listen(move,lime.animation.Event.STOP,function(){
         anim.stop();
-        monster.setFill(test.ss.getFrame('walking-s0001.png'));
+        monster.setFill(test.ss.getFrame('angle10020.png'));
     })
     
 }
