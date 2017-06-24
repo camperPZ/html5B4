@@ -14,8 +14,8 @@ goog.require('lime.ASSETS.monster.plist')
 
 
 
-test.WIDTH = 600;
-test.HEIGHT = 400;
+test.WIDTH = 6000;
+test.HEIGHT = 4000;
 
 
 test.start = function() {
@@ -37,22 +37,22 @@ test.start = function() {
 	test.ss = new lime.SpriteSheet('assets/monster.png',lime.ASSETS.monster.plist);
 	
 	
-    var sprite = test.makeMonster().setPosition(100,100);
+    var sprite = test.makeMonster().setPosition(1000,1000);
     layer.appendChild(sprite);
 	
 	test.selectedMonster = sprite;
 	sprite.select();
 
-    sprite = test.makeMonster().setPosition(500,100);
+    sprite = test.makeMonster().setPosition(5000,1000);
     layer.appendChild(sprite);
 
-    sprite = test.makeMonster().setPosition(300,200);
+    sprite = test.makeMonster().setPosition(3000,2000);
     layer.appendChild(sprite);
 
-    sprite = test.makeMonster().setPosition(200,300);
+    sprite = test.makeMonster().setPosition(2000,3000);
     layer.appendChild(sprite);
 
-    sprite = test.makeMonster().setPosition(400,300);
+    sprite = test.makeMonster().setPosition(4000,3000);
     layer.appendChild(sprite);
 
 	
@@ -61,7 +61,7 @@ test.start = function() {
 };
 
 test.makeMonster = function(){
-    var sprite = new lime.Sprite().setPosition(200,200)
+    var sprite = new lime.Sprite().setPosition(2000,2000)
         .setFill(test.ss.getFrame('angle10020.png'));
 	//layer.appendChild(sprite);
 	
