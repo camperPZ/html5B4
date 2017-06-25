@@ -80,7 +80,7 @@ test.makeMonster = function(){
 	}
 	
 	// other element for hit area because original images have edges and I didn't crop
-	var hitarea = new lime.Sprite().setSize(300,300);
+	var hitarea = new lime.Sprite().setSize(50,80);
 	sprite.appendChild(hitarea);
 	
 	goog.events.listen(hitarea,['mousedown','touchstart'],function(e){
@@ -98,7 +98,7 @@ test.moveToPosition = function(monster,pos){
     
     //determine the direction    
     var dir = Math.round(angle/(Math.PI*2)*8);
-    var dirs = ['1','2','3','4','5','6','7','8'];
+    var dirs = ['7','6','5','4','3','2','1','8'];
     if(dir<0) dir=8+dir;
     dir = dirs[dir];
     
@@ -108,7 +108,7 @@ test.moveToPosition = function(monster,pos){
 	
 	// show animation
 	var anim = new lime.animation.KeyframeAnimation();
-	anim.delay= 1/24;
+	anim.delay= 1/50;
 	for(var i=20;i<=70;i++){
 	    anim.addFrame(test.ss.getFrame('angle'+dir+'00'+i+'.png'));
 	}
